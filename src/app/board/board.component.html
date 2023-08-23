@@ -1,0 +1,16 @@
+<div class="mainDiv">
+       <div>
+
+              <p>current player {{player}}</p>
+              
+              <button (click)="newGame()">New game </button>
+              
+              <h2 *ngIf="winner">the winner is {{this.winner}}</h2>
+       </div>
+</div>
+
+<main>
+       <app-squre *ngFor="let val of squre;
+        let i= index" [value]="val"
+        (click)="makeMove(i)"></app-squre>
+</main>
